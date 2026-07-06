@@ -1,0 +1,301 @@
+/* SUMROCA — internationalization (EN / ES)
+   Persists choice in localStorage under "sumroca_lang". */
+
+'use strict';
+
+const translations = {
+  en: {
+    meta_title: 'SUMROCA — Industrial Construction & Oil & Gas Services',
+    skip_link: 'Skip to content',
+    brand_home: 'SUMROCA — back to top',
+    lang_group: 'Language selection',
+    nav_menu: 'Menu',
+    nav_main: 'Main navigation',
+    nav_home: 'Home',
+    nav_about: 'About',
+    nav_services: 'Services',
+    nav_projects: 'Projects',
+    nav_contact: 'Contact',
+    hero_tagline: 'Excellence in Industrial Construction & Oil & Gas Services',
+    hero_subtagline: 'Consolidated track record since 2006 · Anaco, Venezuela',
+    hero_scroll: 'Scroll to About section',
+
+    mission_title: 'Our Mission',
+    mission_body: "The mission of SUMRO, C.A. is to deliver services that satisfy our customers' requirements — ensuring the highest levels of quality and safety, and maintaining a harmonious, respectful relationship with the environment and the communities surrounding our operations. This commitment supports the profitability that sustains our long-term growth and continuity in the domestic market.",
+    mission_1_title: 'Consolidated Track Record',
+    mission_1_body: "Two decades of sectoral experience serving Venezuela's leading oil and gas operators.",
+    mission_2_title: 'Management Excellence',
+    mission_2_body: 'Leadership team with 20+ years of business experience, operating a project-based management model (GP) that scales with each engagement.',
+    mission_3_title: 'Robust Infrastructure',
+    mission_3_body: 'Capacity to commit over 10,000 man-hours per year of payroll personnel, expandable through contract personnel and strategic partnerships.',
+
+    services_title: 'What We Do',
+    services_intro: 'SUMROCA delivers integrated industrial and mechanical construction solutions for the oil, gas, and heavy industry sectors.',
+    svc_1_title: 'Mechanical Construction',
+    svc_1_body: 'General mechanical construction, spool manufacturing, general welding.',
+    svc_2_title: 'Pipelines & Flowlines',
+    svc_2_body: 'Flowline laying, well interconnection, all-diameter pipe installation.',
+    svc_3_title: 'Tank Fabrication',
+    svc_3_body: 'Storage tank construction for oil, gas, and water applications.',
+    svc_4_title: 'Civil Construction',
+    svc_4_body: 'Well pad construction, road construction, earthwork, and general civil works.',
+    svc_5_title: 'Instrumentation & Telecom',
+    svc_5_body: 'Instrumentation installation, telecommunications systems, control integration.',
+    svc_6_title: 'Equipment & Materials',
+    svc_6_body: 'Heavy and light machinery rental, drill pipe rental, petroleum and industrial materials trading, heavy equipment transportation.',
+
+    gallery_label: 'Project photo gallery',
+    alt_photo_1: 'Offshore platform deck with interconnected piping runs and lifting cranes',
+    alt_photo_2: 'Offshore production facility with process equipment and module structures',
+    alt_photo_3: 'Yellow steel pipe spools staged on an offshore platform deck',
+    alt_photo_4: 'Yellow piping structure installed on an offshore platform',
+    alt_photo_5: 'Offshore platform base under construction beside a support barge',
+    alt_photo_6: 'Offshore platform viewed from a support vessel at sea',
+    alt_photo_7: 'Truck transporting heavy industrial equipment along a dirt road',
+    alt_photo_8: 'Bulldozer performing earthwork during site preparation',
+    alt_photo_9: 'Dump truck working on ground leveling and site preparation',
+    alt_photo_10: 'Supply vessels docked for marine logistics operations',
+    alt_photo_11: 'Refinery complex illuminated at night',
+    alt_photo_12: 'Excavator moving a sand stockpile at a construction site',
+
+    projects_title: 'Portfolio of Executed Services',
+    projects_intro: "SUMROCA has delivered mission-critical projects for Venezuela's leading oil and gas operators.",
+    prj_pdvsagas_1: 'Maintenance of the Anaco–Puerto Ordaz methane gas transportation and distribution system, Puerto Ordaz operational area, Eastern region.',
+    prj_gasanaco_1: 'Lubricant transportation, loading, and transfer from the Cardón plant and similar facilities to the operational and industrial areas of PDVSA Gas Central East production management.',
+    prj_sp_1: 'Sheet acquisition for logistics, supplies, and moving management — Junín Division.',
+    prj_sp_2: 'Sheet acquisition for logistics, supplies, and moving management — Ayacucho Division.',
+    prj_pet_1: 'Supply of lubricated plug valves.',
+    prj_pet_2: 'Acquisition of rubber casings and protective rubber rings — Carabobo PSPSA Division.',
+    prj_pet_3: 'QCI P3000-2FDM equipment (Centrilift indenter packing RP3000-2).',
+    prj_pq_1: 'Supply of check valves and ball valves.',
+    prj_pq_2: 'Instrumentation equipment procurement for manifold and flow lines — Tropical Field.',
+    prj_pq_3: 'Mechanical accessories procurement for manifold and flow lines — Tropical Field.',
+    prj_ps_1: 'Wellhead Platform (WHP) adaptation for future interconnection to the bridge and CPF.',
+    prj_ps_2: 'Works associated with the IPF Phase II adaptation project.',
+    prj_ps_3: 'Gas manifold interconnection with the gas lift injection manifold on the wellhead platform.',
+    prj_ps_4: 'Wellhead plant adjustment bracket for the February 4 platform.',
+    prj_pp_1: 'Oil wells cluster platform construction — B5-2.',
+    prj_pp_2: 'Asphalting and access roads for oil wells cluster B5-2.',
+    prj_pp_3: 'Construction and drilling of H-F2-C03 waterfront monitoring wells.',
+    prj_pp_4: 'Road construction for East Block 01 in the Huyapari field.',
+    prj_pp_5: 'East Block cluster of oil wells platform construction and movement.',
+    prj_pp_6: 'COB Campo Bare industrial canteen.',
+    prj_bv_1: 'Different diameter flange supplies.',
+    prj_bv_2: 'Pig launch and receive traps with quick open-and-close lids.',
+    prj_bv_3: '2" A/I hole plate supplies.',
+    prj_bv_4: 'Dry film roughness and anchor profile measurement equipment supplies.',
+    prj_bv_5: 'Glycerin bimetallic thermometer supplies.',
+    prj_bv_6: 'Swagelok valve supplies.',
+    prj_bv_7: '2000V single conductor cable supplies.',
+    prj_sv_1: 'Completion of Type II Ambulatory construction — Joaquín, El Tigre Municipality, Monagas — VHICOA.',
+    prj_sv_2: 'Fiber optic splicing interconnection between CPF and WHP.',
+    prj_sv_3: 'Pigtail, patchcord, and certification services.',
+    prj_kr_1: 'Laying of 13 kilometers of 16" pipe, San Joaquín to Anaco section.',
+    prj_pt_1: 'Expansion of the low-pressure separation capacity in the EPJ-2 (Module X).',
+
+    contact_title: 'Contact Us',
+    contact_intro: 'For inquiries, proposals, or partnership opportunities, reach out to our team.',
+    contact_email_label: 'Email',
+    contact_address_label: 'Address',
+    contact_founded_label: 'Founded',
+    contact_founded_value: 'March 22, 2006',
+    form_first: 'First name',
+    form_last: 'Last name',
+    form_email: 'Email',
+    form_phone: 'Phone',
+    form_company: 'Company',
+    form_subject: 'Subject',
+    form_message: 'Message',
+    form_submit: 'Submit',
+    form_sending: 'Sending...',
+    form_success: 'Thank you. We have received your message and will get back to you shortly.',
+    form_error: 'Something went wrong. Please email us directly at ejdesilva@sumroca.com',
+
+    footer_contact: 'Contact',
+    footer_navigate: 'Navigate',
+    footer_company: 'Company',
+    footer_founded: 'Founded 2006',
+    footer_rights: '© 2026 SUMRO, C.A. All rights reserved.'
+  },
+
+  es: {
+    meta_title: 'SUMROCA — Construcción Industrial y Servicios de Petróleo y Gas',
+    skip_link: 'Saltar al contenido',
+    brand_home: 'SUMROCA — volver al inicio',
+    lang_group: 'Selección de idioma',
+    nav_menu: 'Menú',
+    nav_main: 'Navegación principal',
+    nav_home: 'Inicio',
+    nav_about: 'Nosotros',
+    nav_services: 'Servicios',
+    nav_projects: 'Proyectos',
+    nav_contact: 'Contacto',
+    hero_tagline: 'Excelencia en Construcción Industrial y Servicios de Petróleo y Gas',
+    hero_subtagline: 'Trayectoria consolidada desde 2006 · Anaco, Venezuela',
+    hero_scroll: 'Desplazarse a la sección Nosotros',
+
+    mission_title: 'Nuestra Misión',
+    mission_body: 'La misión de SUMRO, C.A. es prestar servicios que satisfagan los requerimientos de nuestros clientes — garantizando los más altos niveles de calidad y seguridad, y manteniendo una relación armoniosa y respetuosa con el ambiente y las comunidades que rodean nuestras operaciones. Este compromiso sustenta la rentabilidad que asegura nuestro crecimiento y permanencia a largo plazo en el mercado nacional.',
+    mission_1_title: 'Trayectoria Consolidada',
+    mission_1_body: 'Dos décadas de experiencia sectorial al servicio de las principales operadoras de petróleo y gas de Venezuela.',
+    mission_2_title: 'Excelencia en la Gestión',
+    mission_2_body: 'Equipo directivo con más de 20 años de experiencia empresarial, que opera un modelo de gestión por proyectos (GP) escalable para cada contrato.',
+    mission_3_title: 'Infraestructura Sólida',
+    mission_3_body: 'Capacidad para comprometer más de 10.000 horas-hombre anuales de personal de nómina, ampliable mediante personal contratado y alianzas estratégicas.',
+
+    services_title: 'Qué Hacemos',
+    services_intro: 'SUMROCA ofrece soluciones integrales de construcción industrial y mecánica para los sectores de petróleo, gas e industria pesada.',
+    svc_1_title: 'Construcción Mecánica',
+    svc_1_body: 'Construcción mecánica en general, fabricación de spools, soldadura en general.',
+    svc_2_title: 'Tuberías y Líneas de Flujo',
+    svc_2_body: 'Tendido de líneas de flujo, interconexión de pozos, instalación de tuberías de todos los diámetros.',
+    svc_3_title: 'Fabricación de Tanques',
+    svc_3_body: 'Construcción de tanques de almacenamiento para aplicaciones de petróleo, gas y agua.',
+    svc_4_title: 'Construcción Civil',
+    svc_4_body: 'Construcción de localizaciones de pozos, construcción de vialidad, movimiento de tierra y obras civiles en general.',
+    svc_5_title: 'Instrumentación y Telecomunicaciones',
+    svc_5_body: 'Instalación de instrumentación, sistemas de telecomunicaciones, integración de control.',
+    svc_6_title: 'Equipos y Materiales',
+    svc_6_body: 'Alquiler de maquinaria pesada y liviana, alquiler de tubería de perforación, comercialización de materiales petroleros e industriales, transporte de equipos pesados.',
+
+    gallery_label: 'Galería de fotos de proyectos',
+    alt_photo_1: 'Cubierta de plataforma costa afuera con tuberías interconectadas y grúas de izamiento',
+    alt_photo_2: 'Instalación de producción costa afuera con equipos de proceso y estructuras modulares',
+    alt_photo_3: 'Spools de tubería de acero amarillos dispuestos en la cubierta de una plataforma costa afuera',
+    alt_photo_4: 'Estructura de tubería amarilla instalada en una plataforma costa afuera',
+    alt_photo_5: 'Base de plataforma costa afuera en construcción junto a una gabarra de apoyo',
+    alt_photo_6: 'Plataforma costa afuera vista desde una embarcación de apoyo en el mar',
+    alt_photo_7: 'Camión transportando equipos industriales pesados por una vía de tierra',
+    alt_photo_8: 'Bulldozer realizando movimiento de tierra durante la preparación del sitio',
+    alt_photo_9: 'Camión volteo trabajando en nivelación de terreno y preparación del sitio',
+    alt_photo_10: 'Embarcaciones de suministro atracadas para operaciones de logística marina',
+    alt_photo_11: 'Complejo de refinería iluminado de noche',
+    alt_photo_12: 'Excavadora moviendo un montículo de arena en un sitio de construcción',
+
+    projects_title: 'Portafolio de Servicios Ejecutados',
+    projects_intro: 'SUMROCA ha ejecutado proyectos de misión crítica para las principales operadoras de petróleo y gas de Venezuela.',
+    prj_pdvsagas_1: 'Mantenimiento del sistema de transporte y distribución de gas metano Anaco–Puerto Ordaz, área operacional Puerto Ordaz, región Oriente.',
+    prj_gasanaco_1: 'Transporte, carga y trasvase de lubricantes desde la planta Cardón e instalaciones similares hacia las áreas operacionales e industriales de la gerencia de producción de PDVSA Gas Centro Oriente.',
+    prj_sp_1: 'Adquisición de láminas para la gerencia de logística, suministros y mudanzas — División Junín.',
+    prj_sp_2: 'Adquisición de láminas para la gerencia de logística, suministros y mudanzas — División Ayacucho.',
+    prj_pet_1: 'Suministro de válvulas de tapón lubricadas.',
+    prj_pet_2: 'Adquisición de revestimientos de goma y anillos protectores de goma — División Carabobo PSPSA.',
+    prj_pet_3: 'Equipo QCI P3000-2FDM (empacadura de penetrador Centrilift RP3000-2).',
+    prj_pq_1: 'Suministro de válvulas de retención y válvulas de bola.',
+    prj_pq_2: 'Procura de equipos de instrumentación para múltiple y líneas de flujo — Campo Tropical.',
+    prj_pq_3: 'Procura de accesorios mecánicos para múltiple y líneas de flujo — Campo Tropical.',
+    prj_ps_1: 'Adecuación de la plataforma de cabezal de pozo (WHP) para su futura interconexión con el puente y el CPF.',
+    prj_ps_2: 'Obras asociadas al proyecto de adecuación del IPF Fase II.',
+    prj_ps_3: 'Interconexión del múltiple de gas con el múltiple de inyección de gas lift en la plataforma de cabezal de pozo.',
+    prj_ps_4: 'Soporte de ajuste de la planta de cabezal de pozo para la plataforma 4 de Febrero.',
+    prj_pp_1: 'Construcción de plataforma de macolla de pozos petroleros — B5-2.',
+    prj_pp_2: 'Asfaltado y vías de acceso para la macolla de pozos petroleros B5-2.',
+    prj_pp_3: 'Construcción y perforación de pozos de monitoreo del frente de agua H-F2-C03.',
+    prj_pp_4: 'Construcción de vialidad para el Bloque Este 01 en el campo Huyapari.',
+    prj_pp_5: 'Construcción y movimiento de plataforma de macolla de pozos petroleros del Bloque Este.',
+    prj_pp_6: 'Comedor industrial COB Campo Bare.',
+    prj_bv_1: 'Suministro de bridas de diferentes diámetros.',
+    prj_bv_2: 'Trampas de envío y recibo de cochinos con tapas de apertura y cierre rápido.',
+    prj_bv_3: 'Suministro de placas de orificio de 2" A/I.',
+    prj_bv_4: 'Suministro de equipos de medición de rugosidad de película seca y perfil de anclaje.',
+    prj_bv_5: 'Suministro de termómetros bimetálicos de glicerina.',
+    prj_bv_6: 'Suministro de válvulas Swagelok.',
+    prj_bv_7: 'Suministro de cable monoconductor de 2000 V.',
+    prj_sv_1: 'Culminación de la construcción del Ambulatorio Tipo II — Joaquín, Municipio El Tigre, Monagas — VHICOA.',
+    prj_sv_2: 'Interconexión por empalme de fibra óptica entre el CPF y la WHP.',
+    prj_sv_3: 'Servicios de pigtail, patchcord y certificación.',
+    prj_kr_1: 'Tendido de 13 kilómetros de tubería de 16", tramo San Joaquín–Anaco.',
+    prj_pt_1: 'Ampliación de la capacidad de separación de baja presión en la EPJ-2 (Módulo X).',
+
+    contact_title: 'Contáctenos',
+    contact_intro: 'Para consultas, propuestas u oportunidades de asociación, comuníquese con nuestro equipo.',
+    contact_email_label: 'Correo electrónico',
+    contact_address_label: 'Dirección',
+    contact_founded_label: 'Fundación',
+    contact_founded_value: '22 de marzo de 2006',
+    form_first: 'Nombre',
+    form_last: 'Apellido',
+    form_email: 'Correo electrónico',
+    form_phone: 'Teléfono',
+    form_company: 'Empresa',
+    form_subject: 'Asunto',
+    form_message: 'Mensaje',
+    form_submit: 'Enviar',
+    form_sending: 'Enviando...',
+    form_success: 'Gracias. Hemos recibido su mensaje y le responderemos a la brevedad.',
+    form_error: 'Ocurrió un error. Por favor escríbanos directamente a ejdesilva@sumroca.com',
+
+    footer_contact: 'Contacto',
+    footer_navigate: 'Navegación',
+    footer_company: 'Empresa',
+    footer_founded: 'Fundada en 2006',
+    footer_rights: '© 2026 SUMRO, C.A. Todos los derechos reservados.'
+  }
+};
+
+const I18N_STORAGE_KEY = 'sumroca_lang';
+
+function getStoredLang() {
+  try {
+    const stored = localStorage.getItem(I18N_STORAGE_KEY);
+    return stored === 'es' || stored === 'en' ? stored : 'en';
+  } catch (err) {
+    return 'en';
+  }
+}
+
+let currentLang = getStoredLang();
+
+function applyLanguage(lang) {
+  const dict = translations[lang];
+  if (!dict) return;
+  currentLang = lang;
+
+  document.documentElement.lang = lang;
+  document.title = dict.meta_title;
+
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
+  });
+
+  document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-aria');
+    if (dict[key] !== undefined) el.setAttribute('aria-label', dict[key]);
+  });
+
+  document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-alt');
+    if (dict[key] !== undefined) el.setAttribute('alt', dict[key]);
+  });
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    const active = btn.getAttribute('data-lang') === lang;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+
+  try {
+    localStorage.setItem(I18N_STORAGE_KEY, lang);
+  } catch (err) {
+    /* private browsing: keep the choice for this page view only */
+  }
+}
+
+/* Translate helper shared with main.js */
+function t(key) {
+  const dict = translations[currentLang] || translations.en;
+  return dict[key] !== undefined ? dict[key] : key;
+}
+
+/* Apply immediately (script is deferred, so the DOM is parsed) and wire the toggle. */
+applyLanguage(currentLang);
+
+document.querySelectorAll('.lang-btn').forEach((btn) => {
+  btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang')));
+});
