@@ -29,7 +29,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
+  scroll-padding-top: 104px;
 }
 
 body {
@@ -223,7 +223,7 @@ h3 {
 }
 
 .brand-logo {
-  height: 44px;
+  height: 64px;
   width: auto;
   /* rendered white while the header sits over the dark hero */
   filter: brightness(0) invert(1);
