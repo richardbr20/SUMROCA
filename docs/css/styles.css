@@ -188,6 +188,22 @@ h3 {
   cursor: not-allowed;
 }
 
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--sumroca-navy);
+  color: var(--white);
+  border-color: var(--sumroca-navy);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--sumroca-blue);
+  border-color: var(--sumroca-blue);
+  color: var(--white);
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
@@ -476,6 +492,42 @@ h3 {
   box-shadow: 0 2px 8px rgba(10, 31, 68, 0.06);
 }
 
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--off-white);
+  cursor: pointer;
+  transition: background-color var(--transition), box-shadow var(--transition);
+}
+
+.service-card:hover,
+.service-card:focus-visible {
+  background: var(--white);
+  box-shadow: 0 4px 16px rgba(10, 31, 68, 0.08);
+}
+
+.card-preview {
+  flex-grow: 1;
+}
+
+.card-cta {
+  align-self: flex-end;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sumroca-blue);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--transition);
+}
+
+.service-card:hover .card-cta,
+.service-card:focus-visible .card-cta {
+  text-decoration-color: currentColor;
+}
+
 .client-card h3 {
   margin-bottom: 16px;
 }
@@ -712,6 +764,119 @@ h3 {
 .footer-bottom {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- Service modal ---------- */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(10, 31, 68, 0.85);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .modal {
+    background: rgba(10, 31, 68, 0.94);
+  }
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--white);
+  border-radius: 4px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--sumroca-navy);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+  background: var(--sumroca-navy);
+  color: var(--white);
+}
+
+.modal-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.modal-content {
+  padding: 24px;
+}
+
+.modal-number {
+  margin-bottom: 8px;
+}
+
+.modal-title {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  color: var(--sumroca-navy);
+}
+
+.modal-text p,
+.modal-text h3 {
+  margin-bottom: 16px;
+}
+
+.modal-text h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.modal-text p:last-child {
+  margin-bottom: 0;
+}
+
+.modal-brochure {
+  margin-top: 32px;
+}
+
+@media (min-width: 640px) {
+  .modal-image {
+    height: 320px;
+  }
+
+  .modal-content {
+    padding: 48px;
+  }
+
+  .modal-title {
+    font-size: 32px;
+  }
 }
 
 /* ---------- Reduced motion ---------- */
