@@ -97,3 +97,198 @@ form.addEventListener('submit', async (e) => {
     submitBtn.textContent = t('form_submit');
   }
 });
+
+/* ---------- Services: expandable cards + modal ---------- */
+
+const SERVICES = [
+  {
+    num: '01',
+    titleKey: 'services_01_title',
+    previewKey: 'services_01_preview',
+    image: 'assets/photos/offshore-piping-01.jpg',
+    imageAltKey: 'alt_photo_1',
+    content: [
+      { type: 'heading', key: 'services_01_heading_1' },
+      { type: 'paragraph', key: 'services_01_body_1' },
+      { type: 'paragraph', key: 'services_01_body_2' },
+      { type: 'paragraph', key: 'services_01_body_3' },
+    ],
+    brochure: { href: 'assets/brochures/fps-brochure.pdf', labelKey: 'services_01_brochure_label' },
+  },
+  {
+    num: '02',
+    titleKey: 'services_02_title',
+    previewKey: 'services_02_preview',
+    image: 'assets/photos/refinery-night-01.jpg',
+    imageAltKey: 'alt_photo_11',
+    content: [
+      { type: 'paragraph', key: 'services_02_body_1' },
+      { type: 'heading', key: 'services_02_heading_1' },
+      { type: 'paragraph', key: 'services_02_body_2' },
+      { type: 'paragraph', key: 'services_02_body_3' },
+    ],
+    brochure: null,
+  },
+  {
+    num: '03',
+    titleKey: 'services_03_title',
+    previewKey: 'services_03_preview',
+    image: 'assets/photos/heavy-transport-01.jpg',
+    imageAltKey: 'alt_photo_7',
+    content: [{ type: 'paragraph', key: 'services_03_body_1' }],
+    brochure: null,
+  },
+  {
+    num: '04',
+    titleKey: 'services_04_title',
+    previewKey: 'services_04_preview',
+    image: 'assets/photos/marine-logistics-01.jpg',
+    imageAltKey: 'alt_photo_10',
+    content: [{ type: 'paragraph', key: 'services_04_body_1' }],
+    brochure: null,
+  },
+  {
+    num: '05',
+    titleKey: 'services_05_title',
+    previewKey: 'services_05_preview',
+    image: 'assets/photos/offshore-platform-01.jpg',
+    imageAltKey: 'alt_photo_5',
+    content: [{ type: 'paragraph', key: 'services_05_body_1' }],
+    brochure: null,
+  },
+  {
+    num: '06',
+    titleKey: 'services_06_title',
+    previewKey: 'services_06_preview',
+    image: 'assets/photos/offshore-spools-01.jpg',
+    imageAltKey: 'alt_photo_3',
+    content: [{ type: 'paragraph', key: 'services_06_body_1' }],
+    brochure: null,
+  },
+  {
+    num: '07',
+    titleKey: 'services_07_title',
+    previewKey: 'services_07_preview',
+    image: 'assets/photos/earthwork-01.jpg',
+    imageAltKey: 'alt_photo_8',
+    content: [{ type: 'paragraph', key: 'services_07_body_1' }],
+    brochure: null,
+  },
+];
+
+const servicesGrid = document.getElementById('services-grid');
+
+SERVICES.forEach((svc, index) => {
+  const card = document.createElement('div');
+  card.className = 'card service-card';
+  card.setAttribute('role', 'button');
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('data-i18n-aria', svc.titleKey);
+  card.dataset.serviceIndex = String(index);
+
+  const numEl = document.createElement('p');
+  numEl.className = 'sub-number';
+  numEl.setAttribute('aria-hidden', 'true');
+  numEl.textContent = svc.num;
+
+  const titleEl = document.createElement('h3');
+  titleEl.setAttribute('data-i18n', svc.titleKey);
+  titleEl.textContent = t(svc.titleKey);
+
+  const previewEl = document.createElement('p');
+  previewEl.className = 'card-preview';
+  previewEl.setAttribute('data-i18n', svc.previewKey);
+  previewEl.textContent = t(svc.previewKey);
+
+  const ctaEl = document.createElement('span');
+  ctaEl.className = 'card-cta';
+  ctaEl.setAttribute('data-i18n', 'learn_more');
+  ctaEl.textContent = t('learn_more');
+
+  card.append(numEl, titleEl, previewEl, ctaEl);
+  servicesGrid.appendChild(card);
+});
+
+const serviceModal = document.getElementById('service-modal');
+const modalClose = document.getElementById('modal-close');
+const modalImage = document.getElementById('modal-image');
+const modalNumber = document.getElementById('modal-number');
+const modalTitle = document.getElementById('modal-title');
+const modalText = document.getElementById('modal-text');
+const modalBrochure = document.getElementById('modal-brochure');
+const modalBrochureLabel = document.getElementById('modal-brochure-label');
+
+let openServiceIndex = null;
+let lastFocusedCard = null;
+
+function renderModalContent(index) {
+  const svc = SERVICES[index];
+
+  modalImage.src = svc.image;
+  modalImage.alt = t(svc.imageAltKey);
+  modalNumber.textContent = svc.num;
+  modalTitle.textContent = t(svc.titleKey);
+
+  modalText.innerHTML = '';
+  svc.content.forEach((block) => {
+    const el = document.createElement(block.type === 'heading' ? 'h3' : 'p');
+    el.textContent = t(block.key);
+    modalText.appendChild(el);
+  });
+
+  if (svc.brochure) {
+    modalBrochure.href = svc.brochure.href;
+    modalBrochureLabel.textContent = t(svc.brochure.labelKey);
+    modalBrochure.hidden = false;
+  } else {
+    modalBrochure.hidden = true;
+  }
+}
+
+function onModalKeydown(e) {
+  if (e.key === 'Escape') closeServiceModal();
+}
+
+function openServiceModal(index, triggerEl) {
+  openServiceIndex = index;
+  lastFocusedCard = triggerEl;
+  renderModalContent(index);
+  serviceModal.classList.add('is-open');
+  serviceModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  modalClose.focus();
+  document.addEventListener('keydown', onModalKeydown);
+}
+
+function closeServiceModal() {
+  serviceModal.classList.remove('is-open');
+  serviceModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  document.removeEventListener('keydown', onModalKeydown);
+  openServiceIndex = null;
+  if (lastFocusedCard) lastFocusedCard.focus();
+}
+
+servicesGrid.addEventListener('click', (e) => {
+  const card = e.target.closest('.service-card');
+  if (card) openServiceModal(Number(card.dataset.serviceIndex), card);
+});
+
+servicesGrid.addEventListener('keydown', (e) => {
+  const card = e.target.closest('.service-card');
+  if (!card) return;
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    openServiceModal(Number(card.dataset.serviceIndex), card);
+  }
+});
+
+modalClose.addEventListener('click', closeServiceModal);
+
+serviceModal.addEventListener('click', (e) => {
+  if (e.target === serviceModal) closeServiceModal();
+});
+
+document.addEventListener('sumroca:langchange', () => {
+  if (openServiceIndex !== null) renderModalContent(openServiceIndex);
+});

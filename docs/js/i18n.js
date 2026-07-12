@@ -31,18 +31,43 @@ const translations = {
 
     services_title: 'What We Do',
     services_intro: 'SUMROCA delivers integrated industrial and mechanical construction solutions for the oil, gas, and heavy industry sectors.',
-    svc_1_title: 'Mechanical Construction',
-    svc_1_body: 'General mechanical construction, spool manufacturing, general welding.',
-    svc_2_title: 'Pipelines & Flowlines',
-    svc_2_body: 'Flowline laying, well interconnection, all-diameter pipe installation.',
-    svc_3_title: 'Tank Fabrication',
-    svc_3_body: 'Storage tank construction for oil, gas, and water applications.',
-    svc_4_title: 'Civil Construction',
-    svc_4_body: 'Well pad construction, road construction, earthwork, and general civil works.',
-    svc_5_title: 'Instrumentation & Telecom',
-    svc_5_body: 'Instrumentation installation, telecommunications systems, control integration.',
-    svc_6_title: 'Equipment & Materials',
-    svc_6_body: 'Heavy and light machinery rental, drill pipe rental, petroleum and industrial materials trading, heavy equipment transportation.',
+    learn_more: 'Learn more →',
+    modal_close_label: 'Close',
+
+    services_01_title: 'Flexible Pipe — Sale, Installation, Engineering & Technical Advisory',
+    services_01_preview: 'Advisory, engineering, design, sale, and installation of RTP, TCP, and SCP flexible piping — onshore and offshore.',
+    services_01_heading_1: 'Exclusive Representation of Flexible Pipe Supplies in Venezuela',
+    services_01_body_1: 'As part of our commitment to excellence and innovation, SUMROCA strengthens its solutions portfolio through its strategic alliance and exclusive representation of Flexible Pipe Supplies (FPS) for Venezuela.',
+    services_01_body_2: "This partnership enables us to deliver flexible piping systems, accessories, and specialized solutions with direct manufacturer support — guaranteeing cutting-edge technology, expert technical assistance, and a service focused on maximizing safety, efficiency, and reliability of our clients' operations.",
+    services_01_body_3: 'At SUMROCA, we connect the Venezuelan industry with world-class solutions, consolidating our role as a strategic partner for the oil & gas, energy, and industrial sectors.',
+    services_01_brochure_label: 'Download brochure',
+
+    services_02_title: 'GENCO ESP Penetrators — Sale, Supply & Installation',
+    services_02_preview: 'High-integrity electrical connectivity solutions from GENCO for electric submersible pump systems.',
+    services_02_body_1: 'We supply and install high-integrity electrical connectivity solutions from the GENCO brand for electric submersible pump systems. We guarantee hermetic sealing and secure power transmission under the most critical downhole conditions — preventing insulation failures and gas migration.',
+    services_02_heading_1: 'Exclusive Representation of GENCO in Venezuela',
+    services_02_body_2: 'At SUMROCA we continue to drive high-value solutions for the industry. Through our strategic alliance and exclusive representation of GENCO for Venezuela, we bring our clients the backing of a leading manufacturer recognized for the quality, innovation, and reliability of its products and services.',
+    services_02_body_3: "This alliance allows us to offer direct attention, specialized technical support, and integrated solutions that meet the industry's highest standards — reaffirming our commitment to being a strategic partner for each project's success.",
+
+    services_03_title: 'ESP Cable Protectors and Injection Lines — Supply & Installation',
+    services_03_preview: 'Robust protection for the critical components of your well completion.',
+    services_03_body_1: 'We supply and install custom-designed protectors for ESP power cables, TEC lines, capillary tubes, and chemical injection lines — safeguarding their integrity against impact and friction during string running operations.',
+
+    services_04_title: 'Spooler Services for ESP Cables and Capillary Lines',
+    services_04_preview: 'State-of-the-art spooler units with certified technical staff for safe cable and line handling.',
+    services_04_body_1: 'State-of-the-art spooler units and certified technical staff for the safe handling, laying, tensioning, and recovery of power cables and capillary lines. Minimizes on-site operating time and eliminates the risk of mechanical damage to lines during maneuvers.',
+
+    services_05_title: 'ESP Pump Installation Services',
+    services_05_preview: 'Specialized technical support in ESP system running, assembly, and installation.',
+    services_05_body_1: "Specialized technical support in the running, assembly, and installation of electric submersible pump (ESP) systems. We align with the strictest oil & gas industry standards to ensure optimal commissioning — focused on extending the equipment's operational life (Run Life).",
+
+    services_06_title: 'Wellhead Pipe Inspection (Real-Time Scanning)',
+    services_06_preview: 'Predictive evaluation of production tubing and drill pipe directly at the wellhead.',
+    services_06_body_1: 'Predictive evaluation of production tubing and drill pipe directly at the wellhead. Using real-time electromagnetic scanning technology during pipe extraction, we instantly detect corrosion, wear, or crack problems to prevent catastrophic failures.',
+
+    services_07_title: 'Pipe Inspection with Yard Scanner',
+    services_07_preview: 'Quality control and integrity certification before field mobilization.',
+    services_07_body_1: 'Comprehensive diagnostics via advanced scanner in storage yards, evaluating the internal and external condition of your strings before field mobilization — ensuring only fit material enters operation.',
 
     gallery_label: 'Project photo gallery',
     alt_photo_1: 'Offshore platform deck with interconnected piping runs and lifting cranes',
@@ -144,18 +169,43 @@ const translations = {
 
     services_title: 'Qué Hacemos',
     services_intro: 'SUMROCA ofrece soluciones integrales de construcción industrial y mecánica para los sectores de petróleo, gas e industria pesada.',
-    svc_1_title: 'Construcción Mecánica',
-    svc_1_body: 'Construcción mecánica en general, fabricación de spools, soldadura en general.',
-    svc_2_title: 'Tuberías y Líneas de Flujo',
-    svc_2_body: 'Tendido de líneas de flujo, interconexión de pozos, instalación de tuberías de todos los diámetros.',
-    svc_3_title: 'Fabricación de Tanques',
-    svc_3_body: 'Construcción de tanques de almacenamiento para aplicaciones de petróleo, gas y agua.',
-    svc_4_title: 'Construcción Civil',
-    svc_4_body: 'Construcción de localizaciones de pozos, construcción de vialidad, movimiento de tierra y obras civiles en general.',
-    svc_5_title: 'Instrumentación y Telecomunicaciones',
-    svc_5_body: 'Instalación de instrumentación, sistemas de telecomunicaciones, integración de control.',
-    svc_6_title: 'Equipos y Materiales',
-    svc_6_body: 'Alquiler de maquinaria pesada y liviana, alquiler de tubería de perforación, comercialización de materiales petroleros e industriales, transporte de equipos pesados.',
+    learn_more: 'Ver más →',
+    modal_close_label: 'Cerrar',
+
+    services_01_title: 'Tubería Flexible — Venta, Instalación, Ingeniería y Asesoramiento Técnico',
+    services_01_preview: 'Asesoramiento, ingeniería, diseño, venta e instalación de tubería flexible tipo RTP, TCP y SCP tanto en tierra como en alta mar.',
+    services_01_heading_1: 'Representación Exclusiva de Flexible Pipe Supplies en Venezuela',
+    services_01_body_1: 'Como parte de nuestro compromiso con la excelencia y la innovación, SUMROCA fortalece su portafolio de soluciones a través de su alianza estratégica y representación exclusiva de Flexible Pipe Supplies (FPS) para Venezuela.',
+    services_01_body_2: 'Esta alianza nos permite ofrecer sistemas de tubería flexible, accesorios y soluciones especializadas con respaldo directo del fabricante, garantizando tecnología de vanguardia, asistencia técnica experta y un servicio enfocado en maximizar la seguridad, eficiencia y confiabilidad de las operaciones de nuestros clientes.',
+    services_01_body_3: 'En SUMROCA, conectamos a la industria venezolana con soluciones de clase mundial, consolidando nuestro rol como socio estratégico para los sectores de petróleo y gas, energía e industrial.',
+    services_01_brochure_label: 'Descargar brochure',
+
+    services_02_title: 'Penetradores ESP GENCO — Venta, Suministro e Instalación',
+    services_02_preview: 'Soluciones de conectividad eléctrica de alta integridad de la marca GENCO para sistemas de bombeo electrosumergible.',
+    services_02_body_1: 'Suministramos e instalamos soluciones de conectividad eléctrica de alta integridad de la marca GENCO para sistemas de bombeo electrosumergible. Garantizamos un sellado hermético y una transmisión de potencia segura bajo las condiciones más críticas de fondo de pozo, previniendo fallas de aislamiento y migración de gas.',
+    services_02_heading_1: 'Representación Exclusiva de GENCO en Venezuela',
+    services_02_body_2: 'En SUMROCA seguimos impulsando soluciones de alto valor para la industria. A través de nuestra alianza estratégica y representación exclusiva de GENCO para Venezuela, llevamos a nuestros clientes el respaldo de un fabricante líder, reconocido por la calidad, innovación y confiabilidad de sus productos y servicios.',
+    services_02_body_3: 'Esta alianza nos permite ofrecer atención directa, soporte técnico especializado y soluciones integradas que cumplen con los más altos estándares de la industria, reafirmando nuestro compromiso de ser un socio estratégico para el éxito de cada proyecto.',
+
+    services_03_title: 'Protectores de Cable ESP y Líneas de Inyección — Suministro e Instalación',
+    services_03_preview: 'Protección robusta para los componentes críticos de su completación.',
+    services_03_body_1: 'Proveemos e instalamos protectores diseñados a la medida para cables de potencia ESP, líneas TEC, tubos capilares y líneas de inyección química, asegurando su integridad contra impactos y fricción durante la bajada del aparejo.',
+
+    services_04_title: 'Servicios de Spoolers para Cables ESP y Líneas Capilares',
+    services_04_preview: 'Unidades de spooler de última generación y personal técnico certificado.',
+    services_04_body_1: 'Unidades de spooler de última generación y personal técnico certificado para el manejo, tendido, tensión y recuperación segura de cables de potencia y líneas capilares. Minimizamos los tiempos operativos en sitio y eliminamos el riesgo de daños mecánicos en las líneas durante las maniobras.',
+
+    services_05_title: 'Servicios de Instalación de Bombas ESP',
+    services_05_preview: 'Soporte técnico especializado en la bajada, ensamble e instalación de sistemas de bombeo electrosumergible.',
+    services_05_body_1: 'Soporte técnico especializado en la bajada, ensamble e instalación de sistemas de bombeo electrosumergible (ESP). Nos alineamos con los estándares más estrictos de la industria petrolera para asegurar una puesta en marcha óptima, orientada a extender la vida útil operacional (Run Life) del equipo.',
+
+    services_06_title: 'Inspección de Tubería en Boca de Pozo (Escaneo en Tiempo Real)',
+    services_06_preview: 'Evaluación predictiva de tuberías de producción (tubing) y perforación (drill pipe) directamente en la boca del pozo.',
+    services_06_body_1: 'Evaluación predictiva de tuberías de producción (tubing) y perforación (drill pipe) directamente en la boca del pozo. Utilizando tecnología de escaneo electromagnético en tiempo real durante la extracción, detectamos al instante problemas de corrosión, desgaste o grietas para evitar fallas catastróficas.',
+
+    services_07_title: 'Inspección de Tubería con Escáner en Patios',
+    services_07_preview: 'Control de calidad y certificación de integridad antes de la movilización al campo.',
+    services_07_body_1: 'Realizamos un diagnóstico exhaustivo mediante escáner avanzado en patios de almacenamiento para evaluar el estado interno y externo de sus sartas, garantizando que solo el material apto ingrese a la operación.',
 
     gallery_label: 'Galería de fotos de proyectos',
     alt_photo_1: 'Cubierta de plataforma costa afuera con tuberías interconectadas y grúas de izamiento',
@@ -283,6 +333,8 @@ function applyLanguage(lang) {
   } catch (err) {
     /* private browsing: keep the choice for this page view only */
   }
+
+  document.dispatchEvent(new CustomEvent('sumroca:langchange', { detail: { lang } }));
 }
 
 /* Translate helper shared with main.js */
