@@ -32,12 +32,14 @@ SUMROCA/
     ├── css/
     │   └── styles.css
     ├── js/
-    │   ├── main.js         (nav overlay, scroll state, contact form)
+    │   ├── main.js         (nav overlay, scroll state, contact form,
+    │   │                     services data + expandable service modal)
     │   └── i18n.js         (EN/ES dictionary and language switch)
     └── assets/
         ├── logo/
         │   └── sumroca-logo.png
-        └── photos/         (12 project photos, JPG)
+        ├── photos/         (12 project photos, JPG)
+        └── brochures/      (downloadable PDFs linked from service modals)
 ```
 
 ## How to edit content
@@ -54,6 +56,18 @@ All page content lives in `docs/index.html`, organized by section:
 The site is bilingual. Every translatable element carries a `data-i18n="key"` attribute, and the text for both languages lives in `docs/js/i18n.js` inside the `translations` object (`en: {...}` and `es: {...}`). **To change a text, edit it in `i18n.js` in both languages** — the value in `index.html` is only the initial English fallback, so keep it in sync with the `en` entry.
 
 To add a new project bullet: copy an existing `<li data-i18n="...">` line in `index.html`, give it a new key, and add that key to both `en` and `es` in `i18n.js`.
+
+### Editing the "What We Do" services and their modals
+
+The 7 service cards are not written in `index.html` — they're generated from the `SERVICES` array near the bottom of `docs/js/main.js`. Each entry defines the card's number, its image, and the `data-i18n` keys used for the title, one-line preview, and modal body (headings and paragraphs, in display order). To edit a service:
+
+1. Change the corresponding text in `docs/js/i18n.js` (both `en` and `es`) — that's the only place service copy lives.
+2. To add or reorder body paragraphs/headings, edit that service's `content` array in `SERVICES` (each block is `{ type: 'heading' | 'paragraph', key: '...' }`) and add the matching keys to `i18n.js`.
+3. To add a new service card, copy an existing object in `SERVICES`, give its keys a new prefix (e.g. `services_08_*`), add those keys to both languages in `i18n.js`, and pick an existing photo from `docs/assets/photos/` for `image`.
+
+### Adding a brochure to a service
+
+Only Service 01 currently has a "Download brochure" button. To attach a PDF to another service, drop the file into `docs/assets/brochures/` and set that service's `brochure` field in `SERVICES` (in `main.js`) to `{ href: 'assets/brochures/your-file.pdf', labelKey: 'services_0X_brochure_label' }`, then add `services_0X_brochure_label` ("Download brochure" / "Descargar brochure") to `i18n.js`. Leave `brochure: null` for services without a PDF — the button is hidden automatically.
 
 ## How to update photos
 
