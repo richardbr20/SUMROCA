@@ -113,7 +113,7 @@ const SERVICES = [
       { type: 'paragraph', key: 'services_01_body_2' },
       { type: 'paragraph', key: 'services_01_body_3' },
     ],
-    brochure: { href: 'assets/brochures/fps-brochure.pdf', labelKey: 'services_01_brochure_label' },
+    brochure: { href: 'assets/brochures/fps-brochure.pdf', labelKey: 'common_brochure_download' },
   },
   {
     num: '02',

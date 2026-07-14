@@ -67,7 +67,7 @@ The 7 service cards are not written in `index.html` — they're generated from t
 
 ### Adding a brochure to a service
 
-Only Service 01 currently has a "Download brochure" button. To attach a PDF to another service, drop the file into `docs/assets/brochures/` and set that service's `brochure` field in `SERVICES` (in `main.js`) to `{ href: 'assets/brochures/your-file.pdf', labelKey: 'services_0X_brochure_label' }`, then add `services_0X_brochure_label` ("Download brochure" / "Descargar brochure") to `i18n.js`. Leave `brochure: null` for services without a PDF — the button is hidden automatically.
+Services 01 (FPS) and 02 (GENCO) currently have a "Download brochure" button. To attach a PDF to another service, drop the file into `docs/assets/brochures/` and set that service's `brochure` field in `SERVICES` (in `main.js`) to `{ href: 'assets/brochures/your-file.pdf', labelKey: 'common_brochure_download' }` — the label key is shared across all services, so there's nothing to add in `i18n.js`. Leave `brochure: null` for services without a PDF — the button is hidden automatically.
 
 ## How to update photos
 

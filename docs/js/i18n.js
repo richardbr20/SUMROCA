@@ -34,7 +34,6 @@ const translations = {
     learn_more: 'Learn more →',
     modal_close_label: 'Close',
     common_brochure_download: 'Download brochure',
-    services_01_brochure_label: 'Download brochure',
 
     services_01_title: 'Flexible Pipe — Sale, Installation, Engineering & Technical Advisory',
     services_01_preview: 'Advisory, engineering, design, sale, and installation of RTP, TCP, and SCP flexible piping — onshore and offshore.',
@@ -173,7 +172,6 @@ const translations = {
     learn_more: 'Ver más →',
     modal_close_label: 'Cerrar',
     common_brochure_download: 'Descargar brochure',
-    services_01_brochure_label: 'Descargar brochure',
 
     services_01_title: 'Tubería Flexible — Venta, Instalación, Ingeniería y Asesoramiento Técnico',
     services_01_preview: 'Asesoramiento, ingeniería, diseño, venta e instalación de tubería flexible tipo RTP, TCP y SCP tanto en tierra como en alta mar.',
