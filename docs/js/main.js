@@ -127,7 +127,7 @@ const SERVICES = [
       { type: 'paragraph', key: 'services_02_body_2' },
       { type: 'paragraph', key: 'services_02_body_3' },
     ],
-    brochure: null,
+    brochure: { href: 'assets/brochures/genco-brochure.pdf', labelKey: 'common_brochure_download' },
   },
   {
     num: '03',

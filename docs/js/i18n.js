@@ -33,6 +33,8 @@ const translations = {
     services_intro: 'SUMROCA delivers integrated industrial and mechanical construction solutions for the oil, gas, and heavy industry sectors.',
     learn_more: 'Learn more →',
     modal_close_label: 'Close',
+    common_brochure_download: 'Download brochure',
+    services_01_brochure_label: 'Download brochure',
 
     services_01_title: 'Flexible Pipe — Sale, Installation, Engineering & Technical Advisory',
     services_01_preview: 'Advisory, engineering, design, sale, and installation of RTP, TCP, and SCP flexible piping — onshore and offshore.',
@@ -40,7 +42,6 @@ const translations = {
     services_01_body_1: 'As part of our commitment to excellence and innovation, SUMROCA strengthens its solutions portfolio through its strategic alliance and exclusive representation of Flexible Pipe Supplies (FPS) for Venezuela.',
     services_01_body_2: "This partnership enables us to deliver flexible piping systems, accessories, and specialized solutions with direct manufacturer support — guaranteeing cutting-edge technology, expert technical assistance, and a service focused on maximizing safety, efficiency, and reliability of our clients' operations.",
     services_01_body_3: 'At SUMROCA, we connect the Venezuelan industry with world-class solutions, consolidating our role as a strategic partner for the oil & gas, energy, and industrial sectors.',
-    services_01_brochure_label: 'Download brochure',
 
     services_02_title: 'GENCO ESP Penetrators — Sale, Supply & Installation',
     services_02_preview: 'High-integrity electrical connectivity solutions from GENCO for electric submersible pump systems.',
@@ -171,6 +172,8 @@ const translations = {
     services_intro: 'SUMROCA ofrece soluciones integrales de construcción industrial y mecánica para los sectores de petróleo, gas e industria pesada.',
     learn_more: 'Ver más →',
     modal_close_label: 'Cerrar',
+    common_brochure_download: 'Descargar brochure',
+    services_01_brochure_label: 'Descargar brochure',
 
     services_01_title: 'Tubería Flexible — Venta, Instalación, Ingeniería y Asesoramiento Técnico',
     services_01_preview: 'Asesoramiento, ingeniería, diseño, venta e instalación de tubería flexible tipo RTP, TCP y SCP tanto en tierra como en alta mar.',
@@ -178,7 +181,6 @@ const translations = {
     services_01_body_1: 'Como parte de nuestro compromiso con la excelencia y la innovación, SUMROCA fortalece su portafolio de soluciones a través de su alianza estratégica y representación exclusiva de Flexible Pipe Supplies (FPS) para Venezuela.',
     services_01_body_2: 'Esta alianza nos permite ofrecer sistemas de tubería flexible, accesorios y soluciones especializadas con respaldo directo del fabricante, garantizando tecnología de vanguardia, asistencia técnica experta y un servicio enfocado en maximizar la seguridad, eficiencia y confiabilidad de las operaciones de nuestros clientes.',
     services_01_body_3: 'En SUMROCA, conectamos a la industria venezolana con soluciones de clase mundial, consolidando nuestro rol como socio estratégico para los sectores de petróleo y gas, energía e industrial.',
-    services_01_brochure_label: 'Descargar brochure',
 
     services_02_title: 'Penetradores ESP GENCO — Venta, Suministro e Instalación',
     services_02_preview: 'Soluciones de conectividad eléctrica de alta integridad de la marca GENCO para sistemas de bombeo electrosumergible.',
