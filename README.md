@@ -4,7 +4,7 @@ Static corporate website for **SUMRO, C.A. (SUMROCA)** — industrial and mechan
 
 > **Español:** Sitio web corporativo de SUMROCA (SUMRO, C.A.), empresa de construcción industrial y mecánica y servicios de petróleo y gas en Venezuela. El sitio es bilingüe (inglés/español, botón EN | ES en la barra superior), no requiere compilación y se publica automáticamente con GitHub Pages al hacer push a la rama `main`. Para editar textos, vea la sección "How to edit content" más abajo — todas las traducciones están en `docs/js/i18n.js`.
 
-**Live URL:** https://richardbr20.github.io/SUMROCA/
+**Live URL:** https://sumroca.com/
 
 ## Tech stack
 
