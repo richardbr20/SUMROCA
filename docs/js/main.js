@@ -113,7 +113,9 @@ const SERVICES = [
       { type: 'paragraph', key: 'services_01_body_2' },
       { type: 'paragraph', key: 'services_01_body_3' },
     ],
+    manufacturerLinkKey: 'services_01_body_manufacturer_link',
     brochure: { href: 'assets/brochures/fps-brochure.pdf', labelKey: 'common_brochure_download' },
+    website: 'https://flexiblepipesupplies.com',
   },
   {
     num: '02',
@@ -127,7 +129,9 @@ const SERVICES = [
       { type: 'paragraph', key: 'services_02_body_2' },
       { type: 'paragraph', key: 'services_02_body_3' },
     ],
+    manufacturerLinkKey: 'services_02_body_manufacturer_link',
     brochure: { href: 'assets/brochures/genco-brochure.pdf', labelKey: 'common_brochure_download' },
+    website: 'https://www.gencosystemsinc.com',
   },
   {
     num: '03',
@@ -215,8 +219,11 @@ const modalImage = document.getElementById('modal-image');
 const modalNumber = document.getElementById('modal-number');
 const modalTitle = document.getElementById('modal-title');
 const modalText = document.getElementById('modal-text');
+const modalActions = document.getElementById('modal-actions');
 const modalBrochure = document.getElementById('modal-brochure');
 const modalBrochureLabel = document.getElementById('modal-brochure-label');
+const modalWebsite = document.getElementById('modal-website');
+const modalWebsiteLabel = document.getElementById('modal-website-label');
 
 let openServiceIndex = null;
 let lastFocusedCard = null;
@@ -236,6 +243,17 @@ function renderModalContent(index) {
     modalText.appendChild(el);
   });
 
+  if (svc.manufacturerLinkKey) {
+    const paragraphs = modalText.querySelectorAll('p');
+    const lastParagraph = paragraphs[paragraphs.length - 1];
+    if (lastParagraph) {
+      // Manufacturer-link sentences are static, translator-controlled strings
+      // containing one trusted <a> tag (defined in i18n.js), so appending via
+      // innerHTML here is safe — no user input ever reaches this call.
+      lastParagraph.insertAdjacentHTML('beforeend', ' ' + t(svc.manufacturerLinkKey));
+    }
+  }
+
   if (svc.brochure) {
     modalBrochure.href = svc.brochure.href;
     modalBrochureLabel.textContent = t(svc.brochure.labelKey);
@@ -243,6 +261,16 @@ function renderModalContent(index) {
   } else {
     modalBrochure.hidden = true;
   }
+
+  if (svc.website) {
+    modalWebsite.href = svc.website;
+    modalWebsiteLabel.textContent = t('common_visit_website');
+    modalWebsite.hidden = false;
+  } else {
+    modalWebsite.hidden = true;
+  }
+
+  modalActions.hidden = !svc.brochure && !svc.website;
 }
 
 function onModalKeydown(e) {

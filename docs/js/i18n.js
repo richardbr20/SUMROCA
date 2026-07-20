@@ -34,6 +34,7 @@ const translations = {
     learn_more: 'Learn more →',
     modal_close_label: 'Close',
     common_brochure_download: 'Download brochure',
+    common_visit_website: 'Visit website',
 
     services_01_title: 'Flexible Pipe — Sale, Installation, Engineering & Technical Advisory',
     services_01_preview: 'Advisory, engineering, design, sale, and installation of RTP, TCP, and SCP flexible piping — onshore and offshore.',
@@ -41,6 +42,7 @@ const translations = {
     services_01_body_1: 'As part of our commitment to excellence and innovation, SUMROCA strengthens its solutions portfolio through its strategic alliance and exclusive representation of Flexible Pipe Supplies (FPS) for Venezuela.',
     services_01_body_2: "This partnership enables us to deliver flexible piping systems, accessories, and specialized solutions with direct manufacturer support — guaranteeing cutting-edge technology, expert technical assistance, and a service focused on maximizing safety, efficiency, and reliability of our clients' operations.",
     services_01_body_3: 'At SUMROCA, we connect the Venezuelan industry with world-class solutions, consolidating our role as a strategic partner for the oil & gas, energy, and industrial sectors.',
+    services_01_body_manufacturer_link: 'Learn more about the manufacturer at <a href="https://flexiblepipesupplies.com" target="_blank" rel="noopener noreferrer">flexiblepipesupplies.com</a>.',
 
     services_02_title: 'GENCO ESP Penetrators — Sale, Supply & Installation',
     services_02_preview: 'High-integrity electrical connectivity solutions from GENCO for electric submersible pump systems.',
@@ -48,6 +50,7 @@ const translations = {
     services_02_heading_1: 'Exclusive Representation of GENCO in Venezuela',
     services_02_body_2: 'At SUMROCA we continue to drive high-value solutions for the industry. Through our strategic alliance and exclusive representation of GENCO for Venezuela, we bring our clients the backing of a leading manufacturer recognized for the quality, innovation, and reliability of its products and services.',
     services_02_body_3: "This alliance allows us to offer direct attention, specialized technical support, and integrated solutions that meet the industry's highest standards — reaffirming our commitment to being a strategic partner for each project's success.",
+    services_02_body_manufacturer_link: 'Learn more about the manufacturer at <a href="https://www.gencosystemsinc.com" target="_blank" rel="noopener noreferrer">gencosystemsinc.com</a>.',
 
     services_03_title: 'ESP Cable Protectors and Injection Lines — Supply & Installation',
     services_03_preview: 'Robust protection for the critical components of your well completion.',
@@ -172,6 +175,7 @@ const translations = {
     learn_more: 'Ver más →',
     modal_close_label: 'Cerrar',
     common_brochure_download: 'Descargar brochure',
+    common_visit_website: 'Visitar sitio web',
 
     services_01_title: 'Tubería Flexible — Venta, Instalación, Ingeniería y Asesoramiento Técnico',
     services_01_preview: 'Asesoramiento, ingeniería, diseño, venta e instalación de tubería flexible tipo RTP, TCP y SCP tanto en tierra como en alta mar.',
@@ -179,6 +183,7 @@ const translations = {
     services_01_body_1: 'Como parte de nuestro compromiso con la excelencia y la innovación, SUMROCA fortalece su portafolio de soluciones a través de su alianza estratégica y representación exclusiva de Flexible Pipe Supplies (FPS) para Venezuela.',
     services_01_body_2: 'Esta alianza nos permite ofrecer sistemas de tubería flexible, accesorios y soluciones especializadas con respaldo directo del fabricante, garantizando tecnología de vanguardia, asistencia técnica experta y un servicio enfocado en maximizar la seguridad, eficiencia y confiabilidad de las operaciones de nuestros clientes.',
     services_01_body_3: 'En SUMROCA, conectamos a la industria venezolana con soluciones de clase mundial, consolidando nuestro rol como socio estratégico para los sectores de petróleo y gas, energía e industrial.',
+    services_01_body_manufacturer_link: 'Conozca más sobre el fabricante en <a href="https://flexiblepipesupplies.com" target="_blank" rel="noopener noreferrer">flexiblepipesupplies.com</a>.',
 
     services_02_title: 'Penetradores ESP GENCO — Venta, Suministro e Instalación',
     services_02_preview: 'Soluciones de conectividad eléctrica de alta integridad de la marca GENCO para sistemas de bombeo electrosumergible.',
@@ -186,6 +191,7 @@ const translations = {
     services_02_heading_1: 'Representación Exclusiva de GENCO en Venezuela',
     services_02_body_2: 'En SUMROCA seguimos impulsando soluciones de alto valor para la industria. A través de nuestra alianza estratégica y representación exclusiva de GENCO para Venezuela, llevamos a nuestros clientes el respaldo de un fabricante líder, reconocido por la calidad, innovación y confiabilidad de sus productos y servicios.',
     services_02_body_3: 'Esta alianza nos permite ofrecer atención directa, soporte técnico especializado y soluciones integradas que cumplen con los más altos estándares de la industria, reafirmando nuestro compromiso de ser un socio estratégico para el éxito de cada proyecto.',
+    services_02_body_manufacturer_link: 'Conozca más sobre el fabricante en <a href="https://www.gencosystemsinc.com" target="_blank" rel="noopener noreferrer">gencosystemsinc.com</a>.',
 
     services_03_title: 'Protectores de Cable ESP y Líneas de Inyección — Suministro e Instalación',
     services_03_preview: 'Protección robusta para los componentes críticos de su completación.',

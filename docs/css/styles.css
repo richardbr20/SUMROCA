@@ -204,6 +204,14 @@ h3 {
   color: var(--white);
 }
 
+/* .btn already renders as a navy-outline button (transparent bg, fills navy on
+   hover); .btn-secondary only adds the icon+label flex layout used by .btn-primary. */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
@@ -861,7 +869,11 @@ h3 {
   margin-bottom: 0;
 }
 
-.modal-brochure {
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
   margin-top: 32px;
 }
 
@@ -876,6 +888,10 @@ h3 {
 
   .modal-title {
     font-size: 32px;
+  }
+
+  .modal-actions {
+    flex-direction: row;
   }
 }
 
